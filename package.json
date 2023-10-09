@@ -1,6 +1,6 @@
 {
-  "name": "my-app",
-  "productName": "my-app",
+  "name": "my-app-electron",
+  "productName": "my-app-electron",
   "version": "1.0.0",
   "description": "My Electron application description",
   "main": "src/main.js",
