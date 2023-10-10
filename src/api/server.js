@@ -1,9 +1,7 @@
 const express = require("express");
 const routes = require("../api/routes");
 const dbconfig = require("../sqlite/configs/dbconfig.js");
-dbconfig.sync().then(() => {
-    console.log("banco de dados conectado")
-})
+const dbInit = require("../sqlite/configs/dbInit.js")
 
 const app = express();
 app.use(express.json());
