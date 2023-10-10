@@ -18,6 +18,12 @@ cadastrar.addEventListener("click", (event) => {
         })
     })
     .then((response)=>{
-        console.log(response);
+        return response.json();
+    })
+    .then((data)=>{
+        alert(`Cadastro realizado com sucesso!` + data.name)
+    })
+    .catch((erro)=>{
+        alert
     })
 })
