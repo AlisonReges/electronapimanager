@@ -1,21 +1,13 @@
 const express = require("express");
+const routes = require("../api/routes");
+const dbconfig = require("../sqlite/configs/dbconfig.js");
+dbconfig.sync().then(() => {
+    console.log("banco de dados conectado")
+})
 
 const app = express();
 app.use(express.json());
-
-app.get("/", (req, res) => {
-    return res.json({
-        mensagem: "Olá Mundo!"
-    })
-});
-
-app.post("/teste", (req, res) => {
-    const test = req.body.test;
-    console.log(test);
-    return res.status(200).json({
-        mensagem: "otarianos"
-    });
-})
+app.use(routes);
 
 app.listen(3000, () => {
     console.log("localhost:3000")

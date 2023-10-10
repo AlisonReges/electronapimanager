@@ -1,10 +1,5 @@
 const { app, BrowserWindow } = require('electron');
 const express = require("./api/server");
-const dbconfig = require("./sqlite/configs/dbconfig")
-
-dbconfig.sync().then(()=>{
-  console.log("banco de dados conectado")
-})
 
 const createWindow = () => {
     const win = new BrowserWindow({
@@ -12,7 +7,7 @@ const createWindow = () => {
       height: 600
     })
   
-    win.loadURL('http://localhost:3000')
+    win.loadFile(__dirname + './front-end/index.html')
   }
 
   app.whenReady().then(() => {
