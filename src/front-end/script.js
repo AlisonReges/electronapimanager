@@ -1,5 +1,6 @@
 const cadastrar = document.querySelector("#cadastrar");
 
+//Cadastrar Pessoa.
 cadastrar.addEventListener("click", (event) => {
     event.preventDefault;
     const registration = document.querySelector("#registration").value;
@@ -13,17 +14,21 @@ cadastrar.addEventListener("click", (event) => {
 
         },
         body: JSON.stringify({
-            "registration": registration,
-            "name": name
+            registration,
+            name
         })
     })
-    .then((response)=>{
-        return response.json();
-    })
-    .then((data)=>{
-        alert(`Cadastro realizado com sucesso!` + data.name)
-    })
-    .catch((erro)=>{
-        alert
-    })
+        .then((response) => {
+            return response.json();
+        })
+        .then((data) => {
+            alert(`
+        Pessoa: ${data.name}
+        Matrícula: ${data.registration}
+        Cadastro realizado com sucesso!
+        `);
+        })
+        .catch((erro) => {
+            alert("Houver um erro ao cadastrar a pessoa.");
+        })
 })
