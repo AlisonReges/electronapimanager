@@ -36,7 +36,7 @@ document.getElementById("cadastroClientes").addEventListener("click", function (
     event.preventDefault();
 
     setActiveOption("Cadastros");
-    loadHTML("Cadastros/cadastroClientes.html", document.getElementById("contentDiv"));
+    loadHTML("paginas/Cadastros/cadastroClientes.html", document.getElementById("contentDiv"));
 
 });
 
@@ -106,3 +106,5 @@ function setActiveOption(optionId) {
     option.classList.add("active");
 }
 setActiveOption("Home"); // Define a primeira opção como ativa
+
+
