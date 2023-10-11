@@ -195,12 +195,12 @@ tbody>tr:nth-child(2n) {
 }
 
 tbody>tr {
-    height: 4ch;
+    height:3ch;
 }
 
 td,
 th {
-    padding: 1ch;
+    padding: 0.7ch;
     border-left: 0.1ch solid #cacaca;
     border-bottom: 0.1ch solid #cacaca;
 
@@ -225,4 +225,8 @@ th {
     background: transparent;
     border: none;
 
+}
+.DeleteBtnClientes:hover,
+.AlterarBtnClientes:hover{
+color: #19bbe4;
 }
