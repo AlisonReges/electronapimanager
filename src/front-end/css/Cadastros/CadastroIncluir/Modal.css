@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Varela Round', sans-serif;
+
+}
+body{
+background-color: rgba(0, 0, 0, 0.411);
+width: 100vw;
+height: 100vh;
+}
+.contentHeader{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.TituloHeader{
+    display: flex;
+
+}
+.TituloHeader p{
+  align-self: center;  
+    margin-left: 0.5ch;
+    
+}
+#iconeTitulo{
+    color: #59cbe8;
+    font-size: 3ch;
+    padding-top: 0.2ch;
+}
+
+#ModalPessoa{
+width: 100vw;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+.Modal-Content{
+background: white;
+width: 25%;
+height: 20ch;
+display: flex;
+align-items: center;
+flex-direction: column;
+
+}
+.contentHeader{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1ch;
+    
+}
+.contentHeader button{
+    background-color: transparent;
+    border: transparent;
+    font-size: 2.3ch;
+    color: #59cbe8;
+    cursor: pointer;
+}
+.Modal-Content .TituloHeader{
+    width: 80%;
+    align-self: center;
+    
+ }
+
+ .form{
+    width: 80%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 28% 28%;
+    align-content: center;
+}
+.form input{
+    margin: 0.3ch;
+    border-radius: 0.4ch;
+    box-shadow: none;
+    border:0.1ch solid  #cacaca;
+    background-color: #f4f8f9;
+    
+}
+.form input:focus { box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
+.form .input-content{
+    
+    display: grid;
+    grid-template-columns: 30% 70%;
+
+}
+.form .input-content span{
+    display: flex;
+    align-items: center;
+}
+
+
+.Modal-Content .Concluir-btn{
+    width: 80%;
+    display: flex;
+    justify-content: end;
+}
+.Concluir-btn button{
+    margin-bottom: 1.3ch;
+    background: #59cbe8;
+    border:0.1ch solid  #cacaca;
+    padding: 0.6ch;
+    border-radius:1ch;
+    color: white;
+    cursor: pointer;
+}

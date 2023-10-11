@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de clientes</title>
+    <link rel="stylesheet" href="../css/Cadastros/CadastroClientes.css">
+</head>
+<body>
+<div class="contentCadastros">
+    <main class="Header">
+        <div class="contentHeader">
+        <div class="TituloHeader">
+            <span><ion-icon name="people-sharp"id ="iconeTitulo" ></ion-icon></span><p>Clientes </p>
+        </div>
+        <div class="BtnAdd"> <button>+ Adicionar</button></div>
+        </div>
+    </main>
+
+    <div class="CampoDePesquisa"> 
+        <span id="Busca">Buscar</span>
+
+        <div class="PesquisaContent">
+            <input type="text" id="txtBusca" placeholder=""/>
+            <span> <ion-icon name="search-outline"  id="iconeLupa" ></ion-icon></span>
+        </div>
+    </div>
+
+    <div class="ListaCadastros">
+        <div class="ListaCadastrosClientes">
+            <table class="table"> 
+                <thead>
+                    <tr>
+                        <th style="width: 20%;">Matricula </th>
+                        <th>Nome </th>
+                        <!-- <th>Inscrição Estadual</th> -->
+                        <th class="AcaoBtn" id="Acaobtn">        </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1111111111111</td>
+                        <td>Teste</td>
+                        <td class="AcaoBtn"> <button class="DeleteBtnClientes"><ion-icon name="trash"></ion-icon></button> <button class="AlterarBtnClientes"><ion-icon name="create"></ion-icon></button></td>
+                       
+
+                    </tr>
+                    <tr>
+                        <td>1111111111111</td>
+                        <td>Teste</td>
+                        <td class="AcaoBtn"> <button class="DeleteBtnClientes"><ion-icon name="trash"></ion-icon></button> <button class="AlterarBtnClientes"><ion-icon name="create"></ion-icon></button></td>
+                       
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    
+</div>
+
+
+
+
+
+
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

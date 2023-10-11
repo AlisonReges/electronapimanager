@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Varela Round', sans-serif;
+
+}
+
+body {
+    display: grid;
+    grid-template-columns: 25ch auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto;
+    min-height: 100%;
+    min-width: 100vw;
+    background: #f4f8f9;
+}
+
+
+.contentCadastros {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ======================================HEADER=================================*/
+.main {
+    padding: 0;
+}
+
+
+.Header {
+    padding: 0;
+    width: 100%;
+    height: 4ch;
+    background-color: #cacaca3d;
+    display: flex;
+    justify-content: center;
+    border-bottom: 0.1ch solid #cacaca;
+}
+
+.contentHeader {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2ch;
+}
+
+
+
+.BtnAdd button {
+    width: 10ch;
+    height: 3ch;
+    background-color: #59cbe8a6;
+    cursor: pointer;
+    border: transparent;
+    color: #FFFFFF;
+    transition: 400ms;
+    box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.274);
+    border-radius: 0.5ch;
+}
+
+.BtnAdd button:hover {
+    background-color: #59cbe8;
+    border: 0.1ch solid #FFFFFF;
+    color: #FFFFFF;
+}
+
+.TituloHeader {
+    display: flex;
+
+}
+
+.TituloHeader p {
+    align-self: center;
+    margin-left: 0.5ch;
+
+}
+
+#iconeTitulo {
+    color: #59cbe8;
+    font-size: 3ch;
+    padding-top: 0.2ch;
+}
+
+/*========================================Pesquisa========================================*/
+
+.CampoDePesquisa {
+    width: 98%;
+    height: 4ch;
+    align-self: center;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+    justify-content: end;
+
+}
+
+.PesquisaContent {
+    background-color: #f4f8f9;
+    border: 0.1ch solid #cacaca;
+    width: 30ch;
+    height: 2.5ch;
+    margin: auto;
+    display: flex;
+
+}
+
+.CampoDePesquisa input {
+    width: 90%;
+    height: 100%;
+    border: none;
+    grid-column: 1/3;
+    background: transparent;
+    padding: 0.8ch;
+
+}
+
+.CampoDePesquisa input:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
+.CampoDePesquisa span {
+    grid-column: 3/4;
+
+}
+
+.CampoDePesquisa span #iconeLupa {
+    color: #555555;
+    font-size: 1.7ch;
+    margin-top: 0.2ch;
+}
+
+#Busca {
+    align-self: center;
+    margin-right: 1ch;
+    font-size: 1.3ch;
+}
+
+/*========================================Lista========================================*/
+
+.ListaCadastros {
+    width: 98%;
+    height: 85%;
+    background-color: #f4f8f9;
+    margin: auto;
+    border: 0.1ch solid #cacaca;
+    margin-bottom: 2ch;
+
+}
+
+.ListaCadastrosClientes {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.ListaCadastrosClientes::-webkit-scrollbar {
+    width: 0.7ch;
+    height: 0.7ch;
+}
+
+.ListaCadastrosClientes::-webkit-scrollbar-track {
+    background: #f4f8f9;
+}
+
+.ListaCadastrosClientes::-webkit-scrollbar-thumb {
+    background-color: #59cbe8;
+    border-radius: 3ch;
+
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead>tr {
+    background: #cacaca3d;
+    height: 3.5ch;
+    text-align: left;
+    padding: 1ch;
+    border-bottom: 0.1ch solid #cacaca;
+
+}
+
+tbody>tr:nth-child(2n) {
+    background: #cacaca3d;
+
+}
+
+tbody>tr {
+    height: 4ch;
+}
+
+td,
+th {
+    padding: 1ch;
+    border-left: 0.1ch solid #cacaca;
+    border-bottom: 0.1ch solid #cacaca;
+
+}
+
+.AcaoBtn {
+    display: flex;
+    justify-content: end;
+    border-left: 0;
+}
+
+#Acaobtn {
+    border-bottom: 0;
+}
+
+.DeleteBtnClientes,
+.AlterarBtnClientes {
+    margin-left: 1ch;
+    font-size: 2.5ch;
+    cursor: pointer;
+    color: #59cbe8;
+    background: transparent;
+    border: none;
+
+}

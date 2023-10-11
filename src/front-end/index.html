@@ -1,32 +1,117 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../front-end/style.css">
-  <title>Formulário de Cadastro de Pessoas</title>
+  <title>Tela administrador</title>
+  <link rel="stylesheet" href="../front-end/css/telaDoAdm.css">
 </head>
 
 <body>
-  <div class="container">
-    <h2>Formulário de Cadastro de Pessoas</h2>
-    <form id="formularioPessoa">
-      <div class="form-group">
-        <label for="registration">Matrícula:</label>
-        <input type="text" id="registration" name="registration" required>
+  <header>
+    <div class="conteudoHeader">
+      <div class="logoHeader">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Logo-Test.png" alt="">
       </div>
-      <div class="form-group">
-        <label for="name">Nome:</label>
-        <input type="text" id="name" name="name" required>
-      </div>
-      <div class="form-group">
-        <button type="button" id="cadastrar">Cadastrar</button>
-      </div>
-    </form>
-  </div>
-
-  <script src="script.js"></script>
+    </div>
+  </header>
+  <nav class="MenuN" id="navBar">
+    <button id="btnMenu">
+      <span class="icone">
+        <ion-icon id="iconeMENU" name="menu"></ion-icon>
+      </span>
+    </button>
+    <ul id="listaUL">
+      <li class="Lista" id="Home">
+        <a href="#">
+          <span class="icone">
+            <ion-icon id="iconeMENU" name="home-sharp"></ion-icon>
+          </span>
+          <span class="lista"> Home</span>
+        </a>
+      </li>
+      <li class="Lista" id="Cadastros">
+        <a href="#">
+          <span class="icone">
+            <ion-icon id="iconeMENU" name="people-sharp"></ion-icon>
+          </span>
+          <span class="lista"> Cadastros</span>
+        </a>
+        <ul class="submenu" id="submenuPedidos">
+          <li id="liSub">
+            <a href="#" id="cadastroClientes">Pessoas</a>
+          </li>
+          <li id="liSub">
+            <a href="#" id="cadastroProdutos">Equipamentos</a>
+          </li>
+          <!-- <li id="liSub"><a href="#"id="cadastroOS">Ordem de Serviço</a></li> -->
+        </ul>
+      </li>
+      <li class="Lista" id="Produtos">
+        <a href="#">
+          <span class="icone">
+            <ion-icon id="iconeMENU" name="stats-chart-sharp"></ion-icon>
+            </ion-icon>
+          </span>
+          <span class="lista"> Produtos </span>
+        </a>
+        <ul class="submenu" id="submenuProdutos">
+          <li id="liSub">
+            <a href="#" class="subOpcao1">Subitem 1</a>
+          </li>
+          <li id="liSub">
+            <a href="#" class="subOpcao1">Subitem 2</a>
+          </li>
+          <li id="liSub">
+            <a href="#" class="subOpcao1">Subitem 3</a>
+          </li>
+        </ul>
+      </li>
+      <li class="Lista" id="Administrador">
+        <a href="#">
+          <span class="icone">
+            <ion-icon id="iconeMENU" name="wallet-sharp"></ion-icon>
+          </span>
+          <span class="lista"> Configurações</span>
+        </a>
+        <ul class="submenu" id="submenuAdministrador">
+          <li id="liSub">
+            <a href="#" id="subADM1">Subitem 1</a>
+          </li>
+          <li id="liSub">
+            <a href="#" id="subADM2">Subitem 2</a>
+          </li>
+          <li id="liSub">
+            <a href="#" id="subADM3">Subitem 3</a>
+          </li>
+        </ul>
+      </li>
+      <li class="Lista" id="Ajuda">
+        <a href="#">
+          <span class="icone">
+            <ion-icon id="iconeMENU" name="help-circle-sharp"></ion-icon>
+          </span>
+          <span class="lista"> Ajuda</span>
+        </a>
+      </li>
+      <li class="Lista" id="Sair">
+        <a href="#">
+          <span class="icone">
+            <ion-icon id="iconeMENU" name="log-out-sharp"></ion-icon>
+          </span>
+          <span class="lista"> Sair</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <div class="main" id="contentDiv" include=""></div>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script src="../front-end/js/telaDoAdm.js"></script>
+  <script src="../front-end/js/script.js"></script>
+  <script src="../front-end/js/DropMenu.js"></script>
 </body>
 
 </html>
