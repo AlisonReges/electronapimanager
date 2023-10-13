@@ -99,7 +99,7 @@ document.getElementById("Home").addEventListener("click", function (event) {
   event.preventDefault();
   setActiveOption("Home");
 
-  loadHTML("HomeAdm.html", document.getElementById("contentDiv"));
+  loadHTML("./paginas/home.html", document.getElementById("contentDiv"));
 });
 
 document.getElementById("cadastroClientes").addEventListener("click", function (event) {
