@@ -3,65 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ElectronAPIManager: Bem-Vindo</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f3f3f3;
-            text-align: center;
-            padding: 20px;
-        }
-
-        h1 {
-            font-size: 24px;
-            color: #333;
-        }
-
-        p {
-            font-size: 16px;
-            color: #666;
-            margin: 20px 0;
-        }
-
-        .button {
-            background-color: #007BFF;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 18px;
-            cursor: pointer;
-        }
-
-        .button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <title>ElectronAPIManager</title>
 </head>
 <body>
-    <h1>Bem-Vindo ao ElectronAPIManager</h1>
-    <p>Uma aplicação desktop para interagir com uma API REST interna.</p>
-    <p>Clique no botão abaixo para iniciar:</p>
-    <button class="button" onclick="startApp()">Iniciar</button>
+    <header>
+        <h1>ElectronAPIManager: Aplicação Desktop com API REST Interna</h1>
+    </header>
+    <div class="container">
+        <h2>Descrição</h2>
+        <p>O projeto tem como objetivo desenvolver uma aplicação desktop multiplataforma que funcione como uma interface de usuário intuitiva e amigável para interagir com uma API REST interna. A aplicação permite aos usuários realizar várias operações e consultas de dados por meio de uma interface de desktop responsiva e eficiente.</p>
 
-    <div>
-        <h2>Instruções Básicas</h2>
-        <p>Para começar a usar o ElectronAPIManager, siga estas instruções básicas:</p>
-        <ol>
-            <li>Após iniciar a aplicação, você terá acesso a uma interface amigável para gerenciar dados por meio da API REST interna.</li>
-            <li>Use as opções de menu ou botões na interface para visualizar, adicionar, editar ou excluir registros.</li>
-            <li>Explore as funcionalidades de filtro e classificação para acessar os dados desejados com facilidade.</li>
-            <li>Para compilar o projeto em um executável desktop, use o comando 'npm run make' no terminal.</li>
-        </ol>
-        <p>Se você tiver dúvidas ou encontrar algum problema, entre em contato com o suporte.</p>
+        <h2>Objetivo</h2>
+        <ul>
+            <li>Interface Gráfica: Desenvolver uma interface de desktop usando Electron.js, que fornece uma experiência do usuário rica e responsiva.</li>
+            <li>API REST Interna: Implementar uma API REST usando Node.js e Express.js para gerenciar operações de CRUD (Create, Read, Update, Delete) em um banco de dados SQLite.</li>
+            <li>Banco de Dados: Utilizar o Sequelize.js para definir e gerenciar modelos de dados e realizar operações de banco de dados no SQLite.</li>
+            <li>Funcionalidades da Aplicação Desktop: Permitir que os usuários realizem as seguintes ações por meio da interface desktop:</li>
+            <ul>
+                <li>Visualização e pesquisa de registros existentes no banco de dados.</li>
+                <li>Adição, edição e exclusão de registros.</li>
+                <li>Integração de funcionalidades de filtro e classificação de dados.</li>
+                <li>Respostas amigáveis e feedback ao usuário.</li>
+            </ul>
+        </ul>
+
+        <h2>Tecnologias</h2>
+        <ul>
+            <li>Electron.js: Para a criação da aplicação desktop multiplataforma.</li>
+            <li>Node.js e Express.js: Para o desenvolvimento da API REST interna.</li>
+            <li>Sequelize.js: Para definir e gerenciar modelos de dados e operações de banco de dados.</li>
+            <li>SQLite: Como o banco de dados local para armazenamento de dados.</li>
+        </ul>
+
+        <h2>Entregáveis</h2>
+        <ul>
+            <li>Aplicação desktop funcional com uma interface gráfica amigável.</li>
+            <li>API REST interna que gerencia operações de CRUD e interage com o banco de dados SQLite.</li>
+            <li>Documentação técnica que explica a arquitetura, os modelos de dados e as instruções de uso.</li>
+        </ul>
+
+        <p><strong>Nota:</strong> Este projeto tem como foco a criação de uma aplicação desktop eficaz e sua integração com uma API REST interna para fornecer aos usuários uma maneira fácil de interagir com os dados. A escolha de utilizar o SQLite como banco de dados permite a portabilidade e a facilidade de implantação da aplicação em diferentes plataformas.</p>
     </div>
-
-    <script>
-        function startApp() {
-            // Coloque aqui a lógica para iniciar a aplicação ElectronAPIManager.
-            // Por exemplo, você pode redirecionar para a página principal da aplicação.
-            window.location.href = "pagina_principal.html"; // Substitua pelo caminho correto.
-        }
-    </script>
 </body>
 </html>
