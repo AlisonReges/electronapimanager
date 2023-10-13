@@ -16,7 +16,7 @@ class Pessoas extends Model {
     }
     //Associações entre tabelas, são declaradas aqui.
     // static assossiate(models){
-    //     this.hasOne(models.MODELO DESTRUCTION, {
+    //     this.hasOne(models.MODELO, {
     //         foreignKey: "chaveEstrangeira", as: "apelido"
     //     })
     // }

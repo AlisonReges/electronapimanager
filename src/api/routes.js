@@ -4,6 +4,8 @@ const routes = express.Router();
 
 routes.post("/pessoas", PessoasController.novaPessoa);
 routes.get("/pessoas", PessoasController.listarPessoas);
-routes.get("/buscarpessoa", PessoasController.listarUmaPessoa);
+routes.get("/pessoas/:burcar", PessoasController.listarUmaPessoa);
+routes.put("/pessoas/:id", PessoasController.alterarPessoa);
+routes.delete("/pessoas/:id", PessoasController.deletarPessoa);
 
 module.exports = routes;
