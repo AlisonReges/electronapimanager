@@ -1,6 +1,6 @@
 {
-  "name": "my-app-electron",
-  "productName": "my-app-electron",
+  "name": "electronapimanager",
+  "productName": "ElectronAPIManager",
   "version": "1.0.0",
   "description": "My Electron application description",
   "main": "src/main.js",
@@ -12,10 +12,7 @@
     "lint": "echo \"No linting configured\""
   },
   "keywords": [],
-  "author": {
-    "name": "Alison Reges",
-    "email": "alisonreges@gmail.com"
-  },
+  "author": "Alison Reges <alisonreges@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0",
@@ -31,5 +28,13 @@
     "@electron-forge/maker-zip": "^6.4.2",
     "@electron-forge/plugin-auto-unpack-natives": "^6.4.2",
     "electron": "26.3.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:AlisonReges/electronapimanager.git"
+  },
+  "bugs": {
+    "url": "https://git@github.com:AlisonReges/electronapimanager/issues"
+  },
+  "homepage": "https://git@github.com:AlisonReges/electronapimanager#readme"
 }
