@@ -106,7 +106,7 @@ document.getElementById("cadastroClientes").addEventListener("click", function (
   event.preventDefault();
 
   setActiveOption("Cadastros");
-  loadHTML("paginas/Cadastros/cadastroClientes.html", document.getElementById("contentDiv"));
+  loadHTML("paginas/cadastroPessoas.html", document.getElementById("contentDiv"));
 
 });
 
@@ -193,3 +193,14 @@ window.addEventListener("click", function (event) {
     modal.style.display = "none";
   }
 });
+
+
+//======================= MODAL =============================================
+
+const main = document.querySelector(".main")
+
+const btnAdicionar = main.querySelector("#teste")
+
+btnAdicionar.addEventListener("click", ()=>{
+    console.log("Funcionou")
+})
