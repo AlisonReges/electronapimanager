@@ -51,7 +51,42 @@ Para iniciar a aplicação, siga os passos abaixo:
 
 3. Navegue até o diretório raiz do projeto.
 
-4. Execute o seguinte comando para iniciar a aplicação:
+# Sistema ElectronAPIManager
 
-   ```bash
-   npm start
+Bem-vindo ao Sistema ElectronAPIManager! Este é um aplicativo desktop que permite interagir com uma API REST interna e gerenciar dados de forma eficiente. Abaixo estão as instruções para instalar e executar o sistema em sua máquina.
+
+## Instalação
+
+Antes de iniciar o sistema, é necessário instalar as dependências. Certifique-se de que você tenha o Node.js instalado. Em seguida, abra um terminal ou prompt de comando e navegue até o diretório raiz do projeto. Execute o seguinte comando para instalar os módulos do Node:
+
+```bash
+npm install
+```
+Isso instalará todas as dependências necessárias.
+
+# Executando o Sistema
+Após a instalação dos módulos, você pode iniciar o sistema. Para fazer isso, execute o seguinte comando:
+
+```bash
+npm start
+```
+Isso iniciará o aplicativo ElectronAPIManager, e a interface do sistema será exibida na tela.
+
+# Compilando o Projeto para um Executável Desktop
+Se desejar compilar o projeto em um executável desktop para distribuição, você pode usar o seguinte comando:
+
+```bash
+npm run make
+```
+Isso criará um executável desktop para a plataforma de destino, que você pode distribuir e instalar em outros sistemas.
+
+# Suporte e Contato
+Se você encontrar algum problema ou tiver alguma dúvida, não hesite em entrar em contato com o autor do projeto:
+
+Nome: Alison Reges
+Email: alisonreges@gmail.com
+
+# Licença
+Este sistema é distribuído sob a licença MIT. Consulte o arquivo "LICENSE" no diretório do projeto para obter mais informações sobre a licença.
+
+Obrigado por usar o Sistema ElectronAPIManager. Esperamos que ele atenda às suas necessidades e facilite a interação com a API REST interna.
