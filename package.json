@@ -31,10 +31,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:AlisonReges/electronapimanager.git"
+    "url": "git+https://github.com/AlisonReges/electronapimanager.git"
   },
   "bugs": {
-    "url": "https://git@github.com:AlisonReges/electronapimanager/issues"
+    "url": "https://github.com/AlisonReges/electronapimanager/issues"
   },
-  "homepage": "https://git@github.com:AlisonReges/electronapimanager#readme"
+  "homepage": "https://github.com/AlisonReges/electronapimanager#readme"
 }

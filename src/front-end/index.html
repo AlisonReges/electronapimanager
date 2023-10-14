@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tela administrador</title>
   <link rel="stylesheet" href="../front-end/style.css">
-  <link rel="stylesheet" href="css/cadastroPessoas.css">
+  <script src="js/script.js" defer></script>
 
 </head>
 
@@ -27,11 +27,11 @@
     </button>
     <ul id="listaUL">
       <li class="Lista" id="Home">
-        <a href="#">
+        <a href="#" id="home">
           <span class="icone">
             <ion-icon id="iconeMENU" name="home-sharp"></ion-icon>
           </span>
-          <span class="lista"> Home</span>
+          <span class="lista">Home</span>
         </a>
       </li>
       <li class="Lista" id="Cadastros">
@@ -43,44 +43,24 @@
         </a>
         <ul class="submenu" id="submenuPedidos">
           <li id="liSub">
-            <a href="#" id="cadastroClientes">Pessoas</a>
+            <a href="#" id="pessoas">Pessoas</a>
           </li>
         </ul>
       </li>
-      <li class="Lista" id="Produtos">
-        <a href="#">
-          <span class="icone">
-            <ion-icon id="iconeMENU" name="stats-chart-sharp"></ion-icon>
-            </ion-icon>
-          </span>
-          <span class="lista"> Produtos </span>
-        </a>
-        <ul class="submenu" id="submenuProdutos">
-          <li id="liSub">
-            <a href="#" class="subOpcao1">Subitem 1</a>
-          </li>
-          <li id="liSub">
-            <a href="#" class="subOpcao1">Subitem 2</a>
-          </li>
-          <li id="liSub">
-            <a href="#" class="subOpcao1">Subitem 3</a>
-          </li>
-        </ul>
-      </li>
+
       <li class="Lista" id="Ajuda">
         <a href="#">
           <span class="icone">
             <ion-icon id="iconeMENU" name="help-circle-sharp"></ion-icon>
           </span>
-          <span class="lista"> Ajuda</span>
+          <span class="lista">Ajuda</span>
         </a>
       </li>
     </ul>
   </nav>
-  <div class="main" id="contentDiv" include=""></div>
+  <div class="main" id="main"></div>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script src="../front-end/js/script.js"></script>
 </body>
 
 </html>

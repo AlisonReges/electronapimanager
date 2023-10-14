@@ -1,0 +1,110 @@
+<
+<head>
+    <style>
+        /* Definindo estilos para o contêiner principal */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos para os títulos (h2) */
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Estilos para os parágrafos (p) */
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+}
+
+/* Estilos para listas não ordenadas (ul) */
+ul {
+    list-style: disc;
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+/* Estilos para itens de lista (li) */
+li {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Estilos para texto em negrito (strong) */
+strong {
+    font-weight: bold;
+    color: #555;
+}
+
+/* Estilos para links (a) */
+a {
+    text-decoration: none;
+    color: #0070c0;
+}
+
+/* Estilos para links quando hover (sobre o link) */
+a:hover {
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+div class="contentCadastros">
+    <main class="Header">
+        <div class="contentHeader">
+            <div class="TituloHeader">
+                <span><ion-icon name="people-sharp" id="iconeTitulo"></ion-icon></span>
+                <p>Clientes </p>
+            </div>
+            <div class="BtnAdd"> <button id="teste">+ Adicionar</button></div>
+        </div>
+    </main>
+
+    <div class="CampoDePesquisa">
+        <span id="Busca">Buscar</span>
+
+        <div class="PesquisaContent">
+            <input type="text" id="txtBusca" placeholder="" />
+            <span> <ion-icon name="search-outline" id="iconeLupa"></ion-icon></span>
+        </div>
+    </div>
+
+    <div class="ListaCadastros">
+        <div class="ListaCadastrosClientes">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th style="width: 20%;">Matricula </th>
+                        <th>Nome </th>
+                        <th class="AcaoBtn" id="Acaobtn"></th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1111111111111</td>
+                        <td>Teste</td>
+                        <td class="AcaoBtn"> <button class="DeleteBtnClientes"><ion-icon
+                                    name="trash"></ion-icon></button> <button class="AlterarBtnClientes"><ion-icon
+                                    name="create"></ion-icon></button></td>
+
+
+                    </tr>
+                    <tr>
+                        <td>1111111111111</td>
+                        <td>Teste</td>
+                        <td class="AcaoBtn"> <button class="DeleteBtnClientes"><ion-icon
+                                    name="trash"></ion-icon></button> <button class="AlterarBtnClientes"><ion-icon
+                                    name="create"></ion-icon></button></td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
