@@ -1,20 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Varela Round', sans-serif;
 
-}
 
-body {
-    background-color: rgba(0, 0, 0, 0.411);
+#ModalPessoa {
+    display: none;
+    position: fixed;
     width: 100vw;
     height: 100vh;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.63);
 }
 
-.contentHeader {
+.contentHeaderModal {
     display: flex;
     width: 100%;
     flex-direction: row;
@@ -22,7 +21,7 @@ body {
     align-items: center;
 }
 
-.TituloHeader {
+.TituloHeaderModal {
     display: flex;
 
 }
@@ -39,14 +38,7 @@ body {
     padding-top: 0.2ch;
 }
 
-#ModalPessoa {
-    display: none;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 
 .Modal-Content {
@@ -59,7 +51,7 @@ body {
 
 }
 
-.contentHeader {
+.contentHeaderModal {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -67,7 +59,7 @@ body {
 
 }
 
-.contentHeader button {
+.contentHeaderModal button {
     background-color: transparent;
     border: transparent;
     font-size: 2.3ch;
@@ -75,7 +67,7 @@ body {
     cursor: pointer;
 }
 
-.Modal-Content .TituloHeader {
+.Modal-Content .TituloHeaderModal {
     width: 80%;
     align-self: center;
 
@@ -109,6 +101,7 @@ body {
 
     display: grid;
     grid-template-columns: 30% 70%;
+    height: 70%;
 
 }
 
@@ -119,9 +112,10 @@ body {
 
 
 .Modal-Content .Concluir-btn {
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: end;
+    margin-top: 1ch;
 }
 
 .Concluir-btn button {
@@ -133,3 +127,15 @@ body {
     color: white;
     cursor: pointer;
 }
+
+
+/* Media Query*/
+
+@media (width<=1000px) {
+    .form .input-content {
+    font-size: small;
+    grid-template-columns: 35% 65%;
+
+}
+}
+

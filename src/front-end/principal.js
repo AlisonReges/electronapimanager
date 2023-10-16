@@ -94,3 +94,5 @@ fetch(`http://localhost:3000/pessoas/${pessoaId}`, {
 	.catch(error => {
 		// Lida com erros, se houver, aqui.
 	});
+
+

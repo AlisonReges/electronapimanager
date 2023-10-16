@@ -8,6 +8,7 @@
 
 }
 
+
 body {
     display: grid;
     grid-template-columns: 25ch auto auto auto auto auto;
@@ -165,7 +166,7 @@ header {
     margin: 1.5ch;
     border: 0.1ch solid #cacaca;
     overflow-y: auto;
-    padding: 0.5ch;
+    padding: 0;
 
 }
 
