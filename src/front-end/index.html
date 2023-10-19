@@ -1,101 +1,104 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tela administrador</title>
+    <link rel="stylesheet" href="css/cadastroPessoas.css" />
+    <link rel="stylesheet" href="../front-end/style.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <script src="js/script.js" type="module" defer></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tela administrador</title>
-  <link rel="stylesheet" href="css/cadastroPessoas.css">
-  <link rel="stylesheet" href="../front-end/style.css">
-  <link rel="stylesheet" href="css/modal.css">
-  
-  <script src="js/script.js" defer></script>
+  <body>
+    <header>
+      <div class="conteudoHeader">
+        <div class="logoHeader">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/8/85/Logo-Test.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </header>
+    <nav class="MenuN" id="navBar">
+      <button id="btnMenu">
+        <span class="icone">
+          <ion-icon id="iconeMENU" name="menu"></ion-icon>
+        </span>
+      </button>
+      <ul id="listaUL">
+        <li class="Lista" id="Home">
+          <a href="#" id="home">
+            <span class="icone">
+              <ion-icon id="iconeMENU" name="home-sharp"></ion-icon>
+            </span>
+            <span class="lista">Home</span>
+          </a>
+        </li>
+        <li class="Lista">
+          <a href="#" id="cadastro">
+            <span class="icone">
+              <ion-icon id="iconeMENU" name="people-sharp"></ion-icon>
+            </span>
+            <span class="lista"> Cadastros</span>
+          </a>
+          <ul class="submenu" id="submenuPedidos">
+            <li id="liSub">
+              <a href="#" id="pessoas">Pessoas</a>
+            </li>
+          </ul>
+        </li>
 
-</head>
+        <li class="Lista" id="Ajuda">
+          <a href="#">
+            <span class="icone">
+              <ion-icon id="iconeMENU" name="help-circle-sharp"></ion-icon>
+            </span>
+            <span class="lista">Ajuda</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="main" id="main"></div>
 
-<body>
-  <header>
-    <div class="conteudoHeader">
-      <div class="logoHeader">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Logo-Test.png" alt="">
+    <div id="ModalPessoa" class="Modal">
+      <div class="Modal-Content">
+        <div class="contentHeaderModal">
+          <div class="TituloHeaderModal">
+            <span>
+              <ion-icon name="people-sharp" id="iconeTitulo"></ion-icon>
+            </span>
+            <p>Pessoas</p>
+          </div>
+          <button id="sair">
+            <ion-icon name="close-circle-outline"></ion-icon>
+          </button>
+        </div>
+        <form action="" class="form">
+          <div class="input-content">
+            <span>Nome</span>
+            <input type="text" id="nomePessoa" required />
+          </div>
+          <div class="input-content">
+            <span>Matricula</span>
+            <input type="text" id="matriculaPessoa" required />
+          </div>
+          <div class="Concluir-btn">
+            <span></span>
+            <button id="concluir">Concluir</button>
+          </div>
+        </form>
       </div>
     </div>
-  </header>
-  <nav class="MenuN" id="navBar">
-    <button id="btnMenu">
-      <span class="icone">
-        <ion-icon id="iconeMENU" name="menu"></ion-icon>
-      </span>
-    </button>
-    <ul id="listaUL">
-      <li class="Lista" id="Home">
-        <a href="#" id="home">
-          <span class="icone">
-            <ion-icon id="iconeMENU" name="home-sharp"></ion-icon>
-          </span>
-          <span class="lista">Home</span>
-        </a>
-      </li>
-      <li class="Lista" id="Cadastros"z>
-        <a href="#">
-          <span class="icone">
-            <ion-icon id="iconeMENU" name="people-sharp"></ion-icon>
-          </span>
-          <span class="lista"> Cadastros</span>
-        </a>
-        <ul class="submenu" id="submenuPedidos">
-          <li id="liSub">
-            <a href="#" id="pessoas">Pessoas</a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="Lista" id="Ajuda">
-        <a href="#">
-          <span class="icone">
-            <ion-icon id="iconeMENU" name="help-circle-sharp"></ion-icon>
-          </span>
-          <span class="lista">Ajuda</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
-  <div class="main" id="main"> </div>
-  
-  <div id="ModalPessoa" class="Modal">
-    <div class="Modal-Content">
-      <div class="contentHeaderModal">
-        <div class="TituloHeaderModal">
-          <span>
-            <ion-icon name="people-sharp" id="iconeTitulo"></ion-icon>
-          </span>
-          <p>Pessoas </p>
-        </div>
-        <button id="sair">
-          <ion-icon name="close-circle-outline" ></ion-icon>
-        </button>
-      </div>
-      <form action="" class="form">
-        <div class="input-content">
-          <span>Nome</span>
-          <input type="text"  required >
-        </div>
-        <div class="input-content">
-          <span>Matricula</span>
-          <input type="text"  required>
-        </div>
-        <div class="Concluir-btn">
-          <span></span>
-          <button>Concluir</button>
-        </div>
-      </form>
-
-   
-    </div>
-  </div>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-</body>
-
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+  </body>
 </html>

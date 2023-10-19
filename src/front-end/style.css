@@ -153,6 +153,10 @@ header {
 
 }
 
+ul#submenuPedidos.submenu{
+    display: none;
+}
+
 
 #liSub {
     border: 0;
