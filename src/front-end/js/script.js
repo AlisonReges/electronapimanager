@@ -1,4 +1,5 @@
 import { cadastrarPessoa } from "./cadastrarPessoa.js";
+import { listarPessoas } from "./listarPessoas.js";
 var navBar = document.getElementById("navBar");
 var clique = false;
 
@@ -50,7 +51,7 @@ const home = document.querySelector("#home");
 home.addEventListener("click", async () => {
   const tela = await loadHTML("main", "home.html");
 });
-
+//##################################################################################
 //Cadastrar Pessoa
 pessoa.addEventListener("click", async () => {
   const tela = await loadHTML("main", "pessoas.html");
@@ -66,20 +67,37 @@ pessoa.addEventListener("click", async () => {
     });
 
     sair.addEventListener("click", function () {
+      const registration = document.querySelector("#matriculaPessoa");
+      const name = document.querySelector("#nomePessoa");
+      registration.value = "";
+      name.value = "";
       modal.style.display = "none";
     });
 
-    concluir.addEventListener("click", async(event)=>{
+    concluir.addEventListener("click", async (event) => {
       event.preventDefault();
       const registration = document.querySelector("#matriculaPessoa").value;
       const name = document.querySelector("#nomePessoa").value;
-     
-      cadastrarPessoa(registration, name);
       
-    })
+      cadastrarPessoa(registration, name)
+        .then((data) => {
+          alert(`Cadastro realizado com sucesso: Pessoa: ${data.name}, Matrícula: ${data.registration}`);
+          const registration = document.querySelector("#matriculaPessoa");
+          const name = document.querySelector("#nomePessoa");
+          registration.value = "";
+          name.value = "";
+          modal.style.display = "none";
+        })
+        .catch((erro) => {
+          alert(`Erro ao cadastrar a pessoa: ${erro.message}`);
+        });
+    });
   });
 });
+//##################################################################################
 
+
+//Carregar arquivo html na tela main
 function loadHTML(id, filename) {
   let xhttp;
   let element = document.getElementById(id);
@@ -102,3 +120,10 @@ function loadHTML(id, filename) {
     return xhttp;
   }
 }
+
+
+//##################################################################################
+//Carregar lista de pessoas.
+const lista = listarPessoas();
+console.log(lista)
+//##################################################################################

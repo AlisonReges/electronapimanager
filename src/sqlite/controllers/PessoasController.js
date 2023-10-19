@@ -31,31 +31,32 @@ module.exports = {
     }
   },
 
-
-
-
-  
   //Controller de cadastro de uma nova pessoas.
   async novaPessoa(req, res) {
     try {
       const { registration, name } = req.body;
       const pessoa = await Pessoa.findOne({
-        where:{
-          registration
-        }
-      })
-      if(pessoa){
-        return res.status(409).json()
-      }
-
-      pessoa = await Pessoa.create({
-        registration,
-        name,
+        where: {
+          registration,
+        },
       });
 
-      return res.status(201).json(pessoa);
+      if (pessoa) {
+        // O registro foi encontrado, retorne o erro 409.
+        return res.status(409).json({ mensagem: "Pessoa Já cadastrada." });
+      } else {
+        // O registro não foi encontrado, crie a nova pessoa.
+        const novaPessoa = await Pessoa.create({
+          registration,
+          name,
+        });
+
+        return res.status(201).json(novaPessoa);
+      }
     } catch (error) {
-      return res.status(500).json({erro: "Houve um erro interno ao cadastrar a pessoa."});
+      return res
+        .status(500)
+        .json({ erro: "Houve um erro interno ao cadastrar a pessoa." });
     }
   },
 

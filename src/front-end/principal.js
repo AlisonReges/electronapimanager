@@ -1,6 +1,14 @@
 
 
-
+//  //Buscar pessoa
+//  fetch(`http://localhost:3000/pessoas/${buscar}`)
+//  .then((response) => response.json())
+//  .then((data) => {
+//    return data.json();
+//  })
+//  .catch((error) => {
+//    alert("houver um erro ao buscar a pessoa.");
+//  });
 
 // fetch(`http://localhost:3000/pessoas/${pessoaId}`, {
 // 		method: 'DELETE',

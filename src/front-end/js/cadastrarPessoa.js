@@ -1,34 +1,32 @@
 function cadastrarPessoa(registration, name) {
-  fetch("http://localhost:3000/pessoas", {
-    method: "POST",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      registration,
-      name,
-    }),
-  })
-    .then((response) => {
-      if (response.status === 201) {
-        alert("Cadastro realizado com sucesso.");
-        return response.json();
-      } else if (response.status === 409) {
-        alert("Pessoa já cadastrada.");
-      }
+  return new Promise((resolve, reject) => {
+    fetch("http://localhost:3000/pessoas", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        registration,
+        name,
+      }),
     })
-    .then((data) => {
-      if (data) {
-        alert(`
-            Pessoa: ${data.name}
-            Matrícula: ${data.registration}
-            Cadastro realizado com sucesso!
-          `);
-      }
-    })
-    .catch((erro) => {
-      alert("Houve um erro ao cadastrar a pessoa.");
-    });
+      .then((response) => {
+        if (response.status === 201) {
+          return response.json();
+        } else if (response.status === 409) {
+          reject(new Error("Pessoa já cadastrada."));
+        } else {
+          reject(new Error("Erro desconhecido ao cadastrar a pessoa."));
+        }
+      })
+      .then((data) => {
+        resolve(data);
+      })
+      .catch((erro) => {
+        reject(erro);
+      });
+  });
 }
+
 export { cadastrarPessoa };
