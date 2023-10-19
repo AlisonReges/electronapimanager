@@ -59,7 +59,7 @@ pessoa.addEventListener("click", async () => {
     const btnAdd = document.querySelector("#btnAdd");
     const modal = document.querySelector(".Modal");
     const sair = document.querySelector("#sair");
-
+    let listaPessoas; // Declare a constante fora do escopo da Promessa
     const concluir = document.querySelector("#concluir");
 
     btnAdd.addEventListener("click", function () {
@@ -78,24 +78,74 @@ pessoa.addEventListener("click", async () => {
       event.preventDefault();
       const registration = document.querySelector("#matriculaPessoa").value;
       const name = document.querySelector("#nomePessoa").value;
-      
+
       cadastrarPessoa(registration, name)
         .then((data) => {
-          alert(`Cadastro realizado com sucesso: Pessoa: ${data.name}, Matrícula: ${data.registration}`);
+          alert(
+            `Cadastro realizado com sucesso: Pessoa: ${data.name}, Matrícula: ${data.registration}`
+          );
           const registration = document.querySelector("#matriculaPessoa");
           const name = document.querySelector("#nomePessoa");
           registration.value = "";
           name.value = "";
           modal.style.display = "none";
+          listarPessoas().then((data) => {
+            listaPessoas = data; // Atribui os dados à constante
+            const tabelaPessoas = document.querySelector("tbody#listaPessoas");
+            tabelaPessoas.innerHTML = "";
+            listaPessoas.forEach((element) => {
+              tabelaPessoas.innerHTML += `
+              <tr>
+              <td>${element.registration}</td>
+              <td>${element.name}</td>
+              <td class="AcaoBtn">
+                <button class="DeleteBtnClientes" value="${id}">
+                  <ion-icon name="trash"></ion-icon>
+                </button>
+                <button class="AlterarBtnClientes" value="${id}">
+                  <ion-icon name="create"></ion-icon>
+                </button>
+              </td>
+            </tr>`;
+            });
+          });
         })
         .catch((erro) => {
           alert(`Erro ao cadastrar a pessoa: ${erro.message}`);
         });
     });
+
+    //##################################################################################
+    //Carregar lista de pessoas.
+
+    listarPessoas()
+      .then((data) => {
+        listaPessoas = data; // Atribui os dados à constante
+        const tabelaPessoas = document.querySelector("tbody#listaPessoas");
+        tabelaPessoas.innerHTML = "";
+        listaPessoas.forEach((element) => {
+          tabelaPessoas.innerHTML += `
+          <tr>
+          <td>${element.registration}</td>
+          <td>${element.name}</td>
+          <td class="AcaoBtn">
+            <button class="DeleteBtnClientes">
+              <ion-icon name="trash"></ion-icon>
+            </button>
+            <button class="AlterarBtnClientes">
+              <ion-icon name="create"></ion-icon>
+            </button>
+          </td>
+        </tr>`;
+        });
+      })
+      .catch((error) => {
+        alert("Erro ao listar pessoas");
+      });
+    //##################################################################################
   });
 });
 //##################################################################################
-
 
 //Carregar arquivo html na tela main
 function loadHTML(id, filename) {
@@ -120,10 +170,3 @@ function loadHTML(id, filename) {
     return xhttp;
   }
 }
-
-
-//##################################################################################
-//Carregar lista de pessoas.
-const lista = listarPessoas();
-console.log(lista)
-//##################################################################################

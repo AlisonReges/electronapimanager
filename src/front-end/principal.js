@@ -47,4 +47,3 @@
 // 		// Lida com erros, se houver, aqui.
 // 	});
 
-module.exports = cadastrarPessoa;

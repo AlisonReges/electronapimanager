@@ -1,12 +1,11 @@
 //Listar pessoas
 function listarPessoas() {
-  fetch("http://localhost:3000/pessoas")
-    .then((response) => response.json())
-    .then((data) => {
-      return data.json();
-    })
-    .catch((error) => {
-      alert("Houver um erro ao listar as pessoas.");
+  return fetch("http://localhost:3000/pessoas")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Erro na requisição: " + response.status);
+      }
+      return response.json();
     });
 }
 export { listarPessoas };
