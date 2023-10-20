@@ -63,24 +63,35 @@
     </ul>
   </nav>
   <div class="main" id="main"></div>
+<div id="ModalPessoa" class="Modal">
+        
+    <div class="Modal-Content">
+        <div class="contentHeader"> 
+        <div class="TituloHeader">
+            <span><ion-icon name="people-sharp"id ="iconeTitulo" ></ion-icon></span><p>Pessoas </p>
+        
+        </div>
+        <button id="closeModal"><ion-icon name="close-circle-outline"></ion-icon></button>
+         </div>
 
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span id="closeModal" class="close">&times;</span>
-      <h2>Cadastrar Pessoa</h2>
-      <form id="modalForm">
-        <div class="form-group">
-          <label for="nome">Nome:</label>
-          <input type="text" id="nome" name="nome" autofocus required>
+        
+        <form action="" class="form" id="modalForm">               
+            
+            <div class="input-content">
+                <span>Nome</span><input type="text"></div>
+            <div class="input-content">
+                <span>Matricula</span><input type="text"></div>
+
+
+
+        </form>
+        <div class="Concluir-btn">
+            <span></span>
+            <button>Concluir</button>
         </div>
-        <div class="form-group">
-          <label for="matricula">Matrícula:</label>
-          <input type="text" id="matricula" name="matricula" required>
-        </div>
-        <button type="submit">Cadastrar</button>
-      </form>
     </div>
-  </div>
+</div>
+
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 </body>

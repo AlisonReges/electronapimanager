@@ -13,7 +13,7 @@
     background: rgba(0, 0, 0, 0.63);
 }
 
-.contentHeaderModal {
+.contentHeader{
     display: flex;
     width: 100%;
     flex-direction: row;
@@ -21,18 +21,16 @@
     align-items: center;
 }
 
-.TituloHeaderModal {
+.TituloHeader{
     display: flex;
 
 }
-
-.TituloHeader p {
-    align-self: center;
+.TituloHeader p{
+  align-self: center;  
     margin-left: 0.5ch;
-
+    
 }
-
-#iconeTitulo {
+#iconeTitulo{
     color: #59cbe8;
     font-size: 3ch;
     padding-top: 0.2ch;
@@ -40,95 +38,90 @@
 
 
 
-
-.Modal-Content {
-    background: white;
-    width: 25%;
-    height: 20ch;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+.Modal-Content{
+background: white;
+width: 25%;
+height: 20ch;
+display: flex;
+align-items: center;
+flex-direction: column;
 
 }
-
-.contentHeaderModal {
+.contentHeaderM{
     width: 100%;
     display: flex;
     justify-content: center;
     margin-top: 1ch;
-
+    
 }
-
-.contentHeaderModal button {
+.contentHeaderM button{
     background-color: transparent;
     border: transparent;
     font-size: 2.3ch;
     color: #59cbe8;
     cursor: pointer;
 }
-
-.Modal-Content .TituloHeaderModal {
+.Modal-Content .TituloHeader{
     width: 80%;
     align-self: center;
+    
+ }
 
-}
-
-.form {
+ .form{
     width: 80%;
     height: 80%;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 28% 28%;
+    grid-template-rows: 35% 35%;
     align-content: center;
 }
-
-.form input {
+.form input{
     margin: 0.3ch;
     border-radius: 0.4ch;
     box-shadow: none;
-    border: 0.1ch solid #cacaca;
+    border:0.1ch solid  #cacaca;
     background-color: #f4f8f9;
-
+    
 }
-
-.form input:focus {
-    box-shadow: 0 0 0 0;
+.form input:focus { box-shadow: 0 0 0 0;
     border: 0 none;
     outline: 0;
 }
 
-.form .input-content {
-
+.form .input-content{
+    
     display: grid;
     grid-template-columns: 30% 70%;
-    height: 70%;
 
 }
-
-.form .input-content span {
+.form .input-content span{
     display: flex;
     align-items: center;
 }
 
 
-.Modal-Content .Concluir-btn {
-    width: 100%;
+.Modal-Content .Concluir-btn{
+    width: 80%;
     display: flex;
     justify-content: end;
-    margin-top: 1ch;
+    
 }
-
-.Concluir-btn button {
+.Concluir-btn button{
     margin-bottom: 1.3ch;
     background: #59cbe8;
-    border: 0.1ch solid #cacaca;
+    border:0.1ch solid  #cacaca;
     padding: 0.6ch;
-    border-radius: 1ch;
+    border-radius:1ch;
     color: white;
     cursor: pointer;
 }
-
-
+.Modal-Content #closeModal{
+   font-size: 2ch;
+   color:#59cbe8 ;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
 /* Media Query*/
 
 @media (width<=1000px) {

@@ -6,8 +6,8 @@ pessoa.addEventListener("click", async () => {
   const tela = await loadHTML("main", "pessoas.html");
   tela.addEventListener("load", function () {
     const modalForm = document.getElementById("modalForm");
-    const openModalButton = document.querySelector("#btnAdd");
-    const modal = document.querySelector("#modal");
+    const openModalButton = document.querySelector(".BtnAdd");
+    const modal = document.querySelector("#ModalPessoa");
     const closeModalButton = document.querySelector("#closeModal");
 
 
