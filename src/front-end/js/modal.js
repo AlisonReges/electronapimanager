@@ -25,9 +25,9 @@ pessoa.addEventListener("click", async () => {
       const matricula = document.querySelector("input#matricula").value;
       // Você pode adicionar código para lidar com o envio do formulário aqui
       cadastrarPessoa(matricula, nome).then((data) => {
-        alert(
-          `Cadastro realizado com sucesso: Pessoa: ${data.name}, Matrícula: ${data.registration}`
-        );
+        // alert(
+        //   `Cadastro realizado com sucesso: Pessoa: ${data.name}, Matrícula: ${data.registration}`
+        // );
         document.querySelector("input#nome").value = "";
         document.querySelector("input#matricula").value = "";
         modal.style.display = "none";
