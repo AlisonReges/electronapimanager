@@ -1,6 +1,5 @@
 import { cadastrarPessoa } from "./cadastrarPessoa.js";
 import { listarPessoas } from "./listarPessoas.js";
-let listaPessoas;
 const pessoa = document.querySelector("#pessoas");
 pessoa.addEventListener("click", async () => {
   const tela = await loadHTML("main", "pessoas.html");
