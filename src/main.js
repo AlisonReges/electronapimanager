@@ -1,7 +1,7 @@
 const { app, BrowserWindow } = require('electron');
 const path = require("path");
 const express = require("./api/server");
-
+process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true';
 const index = path.join(__dirname, 'front-end', 'index.html')
 
 const createWindow = () => {
